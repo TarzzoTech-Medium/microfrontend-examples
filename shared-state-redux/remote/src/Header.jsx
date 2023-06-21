@@ -1,10 +1,13 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-export default function Header() {
+export default function Header({ onClear, count }) {
+  const { notificationCount } = useSelector(({ notification }) => ({
+    notificationCount: notification.count,
+  }));
   return (
     <div
       style={{
-        width: '100vw',
         height: '64px',
         display: 'flex',
         alignItems: 'center',
@@ -16,7 +19,18 @@ export default function Header() {
         fontWeight: 700,
       }}
     >
-      Remote Server
+      <div>Remote Server</div>
+      <div
+        style={{
+          width: '350px',
+          display: 'flex',
+          justifyContent: 'space-between',
+        }}
+      >
+        <div>count: {count}</div>
+        <div>notification: {notificationCount}</div>
+        <button onClick={onClear}>Clear</button>
+      </div>
     </div>
   );
 }

@@ -6,6 +6,7 @@ module.exports = {
   exposes: {
     './Header': './src/Header',
     './Footer': './src/Footer',
+    './notificationReducer': './src/reducer',
   },
   remotes: {},
   shared: {
