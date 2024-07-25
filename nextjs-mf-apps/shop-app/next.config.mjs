@@ -1,6 +1,20 @@
 import NextFederationPlugin from '@module-federation/nextjs-mf';
 
 const nextConfig = {
+  reactStrictMode: true,
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+        ],
+      },
+    ];
+  },
   webpack(config, options) {
     const { isServer } = options;
     config.plugins.push(
