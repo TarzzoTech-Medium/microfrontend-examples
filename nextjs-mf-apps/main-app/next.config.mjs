@@ -2,6 +2,7 @@ import NextFederationPlugin from '@module-federation/nextjs-mf';
 
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
   async headers() {
     return [
       {
