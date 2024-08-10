@@ -21,9 +21,11 @@ const nextConfig = {
       new NextFederationPlugin({
         name: 'main_app',
         remotes: {
-          shop_app: `shop_app@http://localhost:3001/_next/static/${
-            isServer ? 'ssr' : 'chunks'
-          }/remoteEntry.js`,
+          shop_app: `shop_app@${
+            process.env.NODE_ENV === 'development'
+              ? 'http://localhost:3001'
+              : 'https://microfrontend-examples-aogy.vercel.app/'
+          }/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`,
         },
         filename: 'static/chunks/remoteEntry.js',
         exposes: {
