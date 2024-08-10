@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true next dev",
-    "build": "NEXT_PRIVATE_LOCAL_WEBPACK=true next build && next export",
+    "build": "NEXT_PRIVATE_LOCAL_WEBPACK=true next build",
     "start": "NEXT_PRIVATE_LOCAL_WEBPACK=true next start  -p 3001",
     "lint": "next lint"
   },
