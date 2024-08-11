@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "https://microfrontend-examples.vercel.app/",
+      "source": "*",
       "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
     }
   ]
