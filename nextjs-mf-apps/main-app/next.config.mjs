@@ -3,6 +3,7 @@ import NextFederationPlugin from '@module-federation/nextjs-mf';
 const nextConfig = {
   reactStrictMode: true,
   async headers() {
+    // https://vercel.com/guides/how-to-enable-cors
     return [
       {
         source: '/:path*',
