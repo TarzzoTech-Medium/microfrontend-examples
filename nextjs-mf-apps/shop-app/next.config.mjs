@@ -25,7 +25,7 @@ const nextConfig = {
           main_app: `main_app@${
             process.env.NODE_ENV === 'development'
               ? 'http://localhost:3000'
-              : 'https://microfrontend-examples.vercel.app/'
+              : 'https://microfrontend-examples.vercel.app'
           }/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`,
         },
         filename: 'static/chunks/remoteEntry.js',
