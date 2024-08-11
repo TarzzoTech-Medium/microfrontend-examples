@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/:path*",
+      "source": "https://microfrontend-examples-aogy.vercel.app/:path*",
       "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
     }
   ]
